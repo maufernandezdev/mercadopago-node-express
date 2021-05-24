@@ -1,0 +1,67 @@
+/*reset and global styles*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+}
+
+
+/* customer login */
+
+.customer-login {
+    background-color: #eee;
+    h1 {
+        margin: 1rem;
+    }
+}
+
+.customer-name {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    border-radius: 5px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 5px 3px rgba(0, 0, 0, .15);
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, .15);
+    width: 500px;
+    padding: 1rem;
+    input[type=text] {
+        margin: 1rem;
+        font-size: 1.2rem;
+        width: 100%;
+        outline: none;
+        border: 1px solid #4a4a4a;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    a {
+        margin: 0rem 1rem;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.5rem;
+        width: 100%;
+        outline: none;
+        border-radius: 5px;
+        background-color: #f49d2c;
+        color: #fff;
+        padding: 10px;
+    }
+}

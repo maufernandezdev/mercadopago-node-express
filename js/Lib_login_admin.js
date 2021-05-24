@@ -3,12 +3,11 @@ let contraadminok = ['testuser123', 'test1', 'admin']; // admin password array
 
 // crear array con usuarios y contraseñas para supuestos clientes para luego poder listarlos en el sector administrador
 
-
 // object functions
-var Functions = 
+var Functions =
 {
     // check if the user entered is registered
-    checkUser: function(user)
+    checkUser: function (user)
     {
         for (var i = 0; i < useradminok.length; i++)
         {
@@ -20,7 +19,7 @@ var Functions =
         return -1;
     },
     // check if the password entered belongs to a registered user 
-    checkPass:function (pass)
+    checkPass: function (pass)
     {
         for (var i = 0; i < contraadminok.length; i++)
         {
@@ -32,7 +31,7 @@ var Functions =
         return -1;
     },
     // check if the username and password are correct
-    login:function (user, pass)
+    login: function (user, pass)
     {
         let ingresoExitoso = false;
         // check if user and pass are in the array 
@@ -48,7 +47,7 @@ var Functions =
             if (userok == -1 && passok == -1)
             {
                 alert("Lo siento usuario y contraseña incorrectas");
-            } 
+            }
             else
             {
                 if (userok == -1)
@@ -67,8 +66,8 @@ var Functions =
         }
         return ingresoExitoso;
     },
-    administratorLoginToTheSystem:function()
-    {   
+    administratorLoginToTheSystem: function ()
+    {
         alert("Ingresando al sistema");
         let user = prompt("Usuario");
         let pass = prompt("Contraseña");
@@ -79,9 +78,9 @@ var Functions =
             {
                 alert("¡Bienvenido de nuevo " + user + "!");
                 // redirect to customer order html
-                window.location.href = "orderManager.html";
+                window.location.href = "order_manager.html";
                 break;
-            } 
+            }
             if (i != 2)
             {
                 user = prompt("Usuario");
