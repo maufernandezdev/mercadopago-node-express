@@ -7,82 +7,85 @@
 //     customer: "Lucia",
 //     description: [Product,Product]
 // }
-
-/* Start [MRF 2021-05-23] builders */
-function Product (product)
-{
-    this.name = product.name;
-    this.price = product.price;
-    this.description = product.description;
-}
-
-function Order (order)
-{
-    this.orderNumber = order.orderNumber;
-    this.total = order.total;
-    this.customer = order.customer;
-    this.description = order.description;
-}
-/* End   [MRF 2021-05-23] builders */
-
-// array products
+// Start array Coffees //
 var Products =
-    [
-        {
-            name: "Americano",
-            price: 200,
-            description: "Shots of espresso and filtered hot water"
-        },
-        {
-            name: "Cappuccino",
-            price: 275,
-            description: "A shot of espresso topped with a deep layer of foamed milk"
-        },
-        {
-            name: "Macchiato",
-            price: 250,
-            description: "Foamed whole milk marked with shots of espresso"
-        },
-        {
-            name: "Latte",
-            price: 210,
-            description: "A shot of espresso in steamed milk lightly topped with foam"
-        },
-        {
-            name: "Sandwich",
-            price: 300,
-            description: "Grilled Ham and Cheese sandwich"
-        },
-        {
-            name: "Brownie",
-            price: 275,
-            description: "Walnut brownie"
-        }
+[
+    {
+        name: "Caffe Latte",
+        price: 210.00,
+        description: "Una mezcla refrescante de espresso con cremosa leche es la clave de este delicioso latte clásico."
+    },
+    {
+        name: "Cappuccino",
+        price: 275.00,
+        description: "Descubre el Cappuccino, una mezcla de espresso con suave y cremosa leche, ligeramente endulzado con toques de cacao."
+    },
+    {
+        name:"Signature chocolate",
+        price:275.00,
+        description:"Deliciosa mezcla de cremosa leche y notas de chocolate."
+    },
+    // {
+    //     name:"Skinny Latte Lactose Free",
+    //     price:210.00,
+    //     description:"Una versión con menos grasa del aclamado clásico. Espresso con suave leche sin lactosa para disfrutar de tu latte con menos calorías. Ahora sin azúcar añadida."
+    // },
+    {
+        name:"Caramel Macchiato",
+        price:250.00,
+        description:"Nuestro Caramel Macchiato es una deliciosa mezcla de intenso espresso con cremosa leche y el dulce sabor y textura del caramelo."
+    },
+];
+// End array Coffees //
 
-    ];
+// Start array Foods //
+var Foods = 
+[
+    {
+        name: "Sandwich",
+        price: 300.00,
+        description: "Grilled Ham and Cheese sandwich"
+    },
+    {
+        name: "Brownie",
+        price: 275.00,
+        description: "Walnut brownie"
+    }
+];
+// End array Foods //
 
-
-
-
-function sortArrayBasedOnName()
+// start object functions
+var Functions =
 {
-    Products.sort((a,b) =>{
-        const nameA = a.name.toLowerCase();
-        const nameB = b.name.toLowerCase();
-        if(nameA < nameB)
+    addProduct: function(index)
+    {
+        alert("elemento seleccionado " + (index +1 ));
+        for(var i = 0;i < Products.length;i++)
         {
-            return -1;
+            if(i == index)
+            {
+                alert("Se agrego " + Products[i].name + " a la orden");
+            }
         }
-        if(nameA > nameB)
-        {
-            return 1;
-        }
+    },
+};
+// start object functions
 
-        return 0;
-    
-    });
+var coffees = document.getElementsByClassName('coffee-galery__item');
+for(var i = 0;i < coffees.length;i++)
+{
+    var div = document.createElement("div");
+    div.innerHTML = ` 
+    <h2>${Products[i].name}</h2>
+    <h3>$ ${Products[i].price.toFixed(2)}</h3>
+    <p>${Products[i].description}</p>
+    <button class="add" onclick="Functions.addProduct(${i})">Añadir</button>
+    `;
+    coffees[i].appendChild(div); 
 }
 
-// array order 
-sortArrayBasedOnName();
-console.log(Products);
+
+
+
+
+

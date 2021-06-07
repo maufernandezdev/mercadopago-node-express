@@ -65,3 +65,52 @@ h1 {
         padding: 10px;
     }
 }
+
+/* customer order */ 
+
+/* start coffees galery */
+
+.coffee-galery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  grid-auto-rows: 385px;
+  grid-column-gap: 10px;
+  grid-row-gap: 45px;
+  /*grid-gap: 10px;*/
+}
+.coffee-galery__item {
+  border-radius: 5px;
+  padding: 10px;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  img {
+      border-radius: 5px;
+      width: 100%;
+      height: 100%;
+      
+  }
+  div
+  {
+    margin: 1rem;
+    height: 295px;
+    text-align: center;
+    p {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 45%; 
+    }
+    button{
+      padding: 5px 10px;
+      border-radius: 4px;
+      border:1px solid #4a4a4a
+    }
+  }
+  
+  
+}
+
+
+/* end carousel */

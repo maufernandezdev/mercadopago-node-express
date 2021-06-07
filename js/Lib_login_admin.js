@@ -93,11 +93,31 @@ var Functions =
         }
         /* End   [MRF 2021-05-13] for loop that allows you to make mistakes only 3 times in the username or password */
     },
-
 };
+// end object functions
 
 // on html script begin
 Functions.administratorLoginToTheSystem();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
