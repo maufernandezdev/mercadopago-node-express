@@ -16,7 +16,8 @@
         <div class="container">
             <div class="customer-name">
                 <h2>Ingrese su nombre para realizar la orden</h2>
-                <input type="text" id="name" placeholder="nombre">
+                <input type="text" id="name" onkeypress="addCustomerByEnter(event)" placeholder="nombre">
+                <input type="text" id="table" placeholder="mesa">
                 <a class="order" onclick="addCustomer()">Ordenar</a>
             </div>
         </div>

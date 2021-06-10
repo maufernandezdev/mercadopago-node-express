@@ -59,7 +59,7 @@ var Functions =
 {
     addProduct: function(index)
     {
-        alert("elemento seleccionado " + (index +1 ));
+        alert("elemento seleccionado " + (index + 1 ));
         for(var i = 0;i < Products.length;i++)
         {
             if(i == index)
