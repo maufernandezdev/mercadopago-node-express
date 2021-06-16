@@ -114,3 +114,41 @@ h1 {
 
 
 /* end carousel */
+
+.container
+{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.table{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+  div
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50%;
+    padding: 1rem;
+    margin:1rem;
+    -webkit-box-shadow: 0 0 5px 3px rgba(0, 0, 0, .15);
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, .15);
+    border-radius: 5px;
+    h2,h3,p{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+  
+}

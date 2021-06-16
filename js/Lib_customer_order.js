@@ -7,6 +7,7 @@
 //     customer: "Lucia",
 //     description: [Product,Product]
 // }
+
 // Start array Coffees //
 var Products =
 [
@@ -59,17 +60,41 @@ var Functions =
 {
     addProduct: function(index)
     {
-        alert("elemento seleccionado " + (index + 1 ));
         for(var i = 0;i < Products.length;i++)
         {
             if(i == index)
-            {
+            { 
                 alert("Se agrego " + Products[i].name + " a la orden");
+                var prod = 'Product_' + i;
+                var quantity = Functions.getQuantity(prod);
+                localStorage.setItem(prod , JSON.stringify({
+                    name:Products[i].name,
+                    price:Products[i].price,
+                    description:Products[i].description,
+                    quantity:quantity,
+                }));
             }
         }
     },
+    getQuantity:function(product)
+    {
+        for(var i = 0;i < localStorage.length;i++)
+        {
+            var prod = 'Product_' + i;
+            if(prod == product)
+            {
+                var item = localStorage.getItem(prod);
+                var Product = JSON.parse(item)
+                return Product.quantity * 1 + 1;
+            }
+        }
+        return 1;
+    }, 
 };
 // start object functions
+
+
+
 
 var coffees = document.getElementsByClassName('coffee-galery__item');
 for(var i = 0;i < coffees.length;i++)
