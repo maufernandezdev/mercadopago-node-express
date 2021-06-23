@@ -7,107 +7,105 @@
 //     customer: "Lucia",
 //     description: [Product,Product]
 // }
-
-// Start array Coffees //
-var Products =
-[
-    {
-        name: "Caffe Latte",
-        price: 210.00,
-        description: "Una mezcla refrescante de espresso con cremosa leche es la clave de este delicioso latte clásico."
-    },
-    {
-        name: "Cappuccino",
-        price: 275.00,
-        description: "Descubre el Cappuccino, una mezcla de espresso con suave y cremosa leche, ligeramente endulzado con toques de cacao."
-    },
-    {
-        name:"Signature chocolate",
-        price:275.00,
-        description:"Deliciosa mezcla de cremosa leche y notas de chocolate."
-    },
-    // {
-    //     name:"Skinny Latte Lactose Free",
-    //     price:210.00,
-    //     description:"Una versión con menos grasa del aclamado clásico. Espresso con suave leche sin lactosa para disfrutar de tu latte con menos calorías. Ahora sin azúcar añadida."
-    // },
-    {
-        name:"Caramel Macchiato",
-        price:250.00,
-        description:"Nuestro Caramel Macchiato es una deliciosa mezcla de intenso espresso con cremosa leche y el dulce sabor y textura del caramelo."
-    },
-];
-// End array Coffees //
-
-// Start array Foods //
-var Foods = 
-[
-    {
-        name: "Sandwich",
-        price: 300.00,
-        description: "Grilled Ham and Cheese sandwich"
-    },
-    {
-        name: "Brownie",
-        price: 275.00,
-        description: "Walnut brownie"
-    }
-];
-// End array Foods //
-
-// start object functions
-var Functions =
-{
-    addProduct: function(index)
-    {
-        for(var i = 0;i < Products.length;i++)
+    // Start array Coffees //
+    var Products =
+    [
         {
-            if(i == index)
-            { 
-                alert("Se agrego " + Products[i].name + " a la orden");
-                var prod = 'Product_' + i;
-                var quantity = Functions.getQuantity(prod);
-                localStorage.setItem(prod , JSON.stringify({
-                    name:Products[i].name,
-                    price:Products[i].price,
-                    description:Products[i].description,
-                    quantity:quantity,
-                }));
-            }
+            name: "Caffe Latte",
+            price: 210.00,
+            description: "Una mezcla refrescante de espresso con cremosa leche es la clave de este delicioso latte clásico."
+        },
+        {
+            name: "Cappuccino",
+            price: 275.00,
+            description: "Descubre el Cappuccino, una mezcla de espresso con suave y cremosa leche, ligeramente endulzado con toques de cacao."
+        },
+        {
+            name:"Signature chocolate",
+            price:275.00,
+            description:"Deliciosa mezcla de cremosa leche y notas de chocolate."
+        },
+        // {
+        //     name:"Skinny Latte Lactose Free",
+        //     price:210.00,
+        //     description:"Una versión con menos grasa del aclamado clásico. Espresso con suave leche sin lactosa para disfrutar de tu latte con menos calorías. Ahora sin azúcar añadida."
+        // },
+        {
+            name:"Caramel Macchiato",
+            price:250.00,
+            description:"Nuestro Caramel Macchiato es una deliciosa mezcla de intenso espresso con cremosa leche y el dulce sabor y textura del caramelo."
+        },
+    ];
+    // End array Coffees //
+
+    // Start array Foods //
+    var Foods = 
+    [
+        {
+            name: "Sandwich",
+            price: 300.00,
+            description: "Grilled Ham and Cheese sandwich"
+        },
+        {
+            name: "Brownie",
+            price: 275.00,
+            description: "Walnut brownie"
         }
-    },
-    getQuantity:function(product)
+    ];
+    // End array Foods //
+
+    // start object functions
+    var Functions =
     {
-        for(var i = 0;i < localStorage.length;i++)
+        addProduct: function(index)
         {
-            var prod = 'Product_' + i;
-            if(prod == product)
+            for(var i = 0;i < Products.length;i++)
             {
-                var item = localStorage.getItem(prod);
-                var Product = JSON.parse(item)
-                return Product.quantity * 1 + 1;
+                if(i == index)
+                { 
+                    alert("Se agrego " + Products[i].name + " a la orden");
+                    var prod = 'Product_' + i;
+                    var quantity = Functions.getQuantity(prod);
+                    localStorage.setItem(prod , JSON.stringify({
+                        name:Products[i].name,
+                        price:Products[i].price,
+                        description:Products[i].description,
+                        quantity:quantity,
+                    }));
+                }
             }
-        }
-        return 1;
-    }, 
-};
-// start object functions
+        },
+        getQuantity:function(product)
+        {
+            for(var i = 0;i < localStorage.length;i++)
+            {
+                var prod = 'Product_' + i;
+                if(prod == product)
+                {
+                    var item = localStorage.getItem(prod);
+                    var Product = JSON.parse(item)
+                    return Product.quantity * 1 + 1;
+                }
+            }
+            return 1;
+        }, 
+    };
+    // start object functions
 
+    var coffees = document.getElementsByClassName('coffee-galery__item');
+    for(var i = 0;i < coffees.length;i++)
+    {
+        var div = document.createElement("div");
+        div.innerHTML = ` 
+        <h2>${Products[i].name}</h2>
+        <h3>$ ${Products[i].price.toFixed(2)}</h3>
+        <p>${Products[i].description}</p>
+        <button class="add" onclick="Functions.addProduct(${i})">Añadir</button>
+        `;
+        coffees[i].appendChild(div); 
+    }
 
-
-
-var coffees = document.getElementsByClassName('coffee-galery__item');
-for(var i = 0;i < coffees.length;i++)
-{
-    var div = document.createElement("div");
-    div.innerHTML = ` 
-    <h2>${Products[i].name}</h2>
-    <h3>$ ${Products[i].price.toFixed(2)}</h3>
-    <p>${Products[i].description}</p>
-    <button class="add" onclick="Functions.addProduct(${i})">Añadir</button>
-    `;
-    coffees[i].appendChild(div); 
-}
+    
 
 
 
