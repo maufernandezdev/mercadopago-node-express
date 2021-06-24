@@ -15,11 +15,11 @@
     <section>
       <div class="container">
         <div class="coffee-galery">
-          <div class="coffee-galery__item" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/caffe-latte-en2.jpg" alt="responsive"></div>
-          <div class="coffee-galery__item" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/cappuccino-en2.jpg" alt="responsive"></div>
-          <div class="coffee-galery__item" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/signature-chocolate-en2.jpg" alt="responsive"></div>
+          <div class="coffee-galery__item" id="item-1" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/caffe-latte-en2.jpg" alt="responsive"></div>
+          <div class="coffee-galery__item" id="item-2" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/cappuccino-en2.jpg" alt="responsive"></div>
+          <div class="coffee-galery__item" id="item-3" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/signature-chocolate-en2.jpg" alt="responsive"></div>
           <!--<div class="coffee-galery__item" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/skinny-latte-lactose-free-en2.jpg" alt="responsive"></div>--> 
-          <div class="coffee-galery__item" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/caramel-macchiato-en2.jpg" alt="responsive"></div>
+          <div class="coffee-galery__item" id="item-4" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/caramel-macchiato-en2.jpg" alt="responsive"></div>
         </div>
         <div class="description">
             <textarea name="" placeholder="Descripción" id="txt-description" cols="30" rows="10"></textarea>
@@ -35,14 +35,30 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
 <script>
- // button description on click
- $("#btn-description").click(function () { 
-        var description = $("#txt-description").val();
-        console.log("descripcion: " + description);
-        localStorage.setItem("description",description);
-        alert("Descripción enviada!");
-        $("#txt-description").val("");
+ 
+ $( document ).ready(function() {
+  
+    $("#item-1").fadeOut("slow", function(){
+        $("#item-1").fadeIn(1000);
+    }); 
+    $("#item-2").fadeOut("slow", function(){
+        $("#item-2").fadeIn(1500);
+    }); 
+    $("#item-3").fadeOut("slow", function(){
+        $("#item-3").fadeIn(2000);
+    }); 
+    $("#item-4").fadeOut("slow", function(){
+        $("#item-4").fadeIn(2500);
+    }); 
+    // button description on click
+   $("#btn-description").click(function () { 
+          var description = $("#txt-description").val();
+          console.log("descripcion: " + description);
+          localStorage.setItem("description",description);
+          alert("Descripción enviada!");
+          $("#txt-description").val("");
     });
+});
 </script>
 </body>
 
