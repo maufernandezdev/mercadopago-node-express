@@ -13,53 +13,60 @@
 
 <body>
     <section>
-      <div class="container">
-        <div class="coffee-galery">
-          <div class="coffee-galery__item" id="item-1" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/caffe-latte-en2.jpg" alt="responsive"></div>
-          <div class="coffee-galery__item" id="item-2" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/cappuccino-en2.jpg" alt="responsive"></div>
-          <div class="coffee-galery__item" id="item-3" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/signature-chocolate-en2.jpg" alt="responsive"></div>
-          <!--<div class="coffee-galery__item" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/skinny-latte-lactose-free-en2.jpg" alt="responsive"></div>--> 
-          <div class="coffee-galery__item" id="item-4" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/caramel-macchiato-en2.jpg" alt="responsive"></div>
+        <div class="container">
+            <button class="button" id="ver-productos">Ver productos</button>
+            <div class="coffee-galery">
+                <div class="coffee-galery__item" id="item-1" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/caffe-latte-en2.jpg" alt="responsive"></div>
+                <div class="coffee-galery__item" id="item-2" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/cappuccino-en2.jpg" alt="responsive"></div>
+                <div class="coffee-galery__item" id="item-3" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/signature-chocolate-en2.jpg" alt="responsive"></div>
+                <!--<div class="coffee-galery__item" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/skinny-latte-lactose-free-en2.jpg" alt="responsive"></div>-->
+                <div class="coffee-galery__item" id="item-4" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/caramel-macchiato-en2.jpg" alt="responsive"></div>
+            </div>
+            <div class="description">
+                <textarea name="" placeholder="Descripción" id="txt-description" cols="30" rows="10"></textarea>
+                <button class="button" id="btn-description">Enviar</button>
+            </div>
         </div>
-        <div class="description">
-            <textarea name="" placeholder="Descripción" id="txt-description" cols="30" rows="10"></textarea>
-          <button class="button" id="btn-description" >Enviar</button>
-        </div>
-      </div>
     </section>
-    <script src="js/Lib_customer_order.js" ></script>
+    <script src="js/Lib_customer_order.js"></script>
     <script src="js/Functions.js"></script>
-<!-- jQuery , Popper.js, Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-<script>
- 
- $( document ).ready(function() {
-  
-    $("#item-1").fadeOut("slow", function(){
-        $("#item-1").fadeIn(1000);
-    }); 
-    $("#item-2").fadeOut("slow", function(){
-        $("#item-2").fadeIn(1500);
-    }); 
-    $("#item-3").fadeOut("slow", function(){
-        $("#item-3").fadeIn(2000);
-    }); 
-    $("#item-4").fadeOut("slow", function(){
-        $("#item-4").fadeIn(2500);
-    }); 
-    // button description on click
-   $("#btn-description").click(function () { 
-          var description = $("#txt-description").val();
-          console.log("descripcion: " + description);
-          localStorage.setItem("description",description);
-          alert("Descripción enviada!");
-          $("#txt-description").val("");
-    });
-});
-</script>
+    <!-- jQuery , Popper.js, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+
+
+            // button description on click
+            $("#btn-description").click(function() {
+                var description = $("#txt-description").val();
+                console.log("descripcion: " + description);
+                localStorage.setItem("description", description);
+                alert("Descripción enviada!");
+                $("#txt-description").val("");
+            });
+            $("#ver-productos").click(function() {
+                $('.coffee-galery').css({
+                    "opacity": "1"
+                });
+                $("#item-1").fadeOut("slow", function() {
+                    $("#item-1").fadeIn(1000);
+                });
+                $("#item-2").fadeOut("slow", function() {
+                    $("#item-2").fadeIn(1500);
+                });
+                $("#item-3").fadeOut("slow", function() {
+                    $("#item-3").fadeIn(2000);
+                });
+                $("#item-4").fadeOut("slow", function() {
+                    $("#item-4").fadeIn(2500);
+                });
+            });
+
+        });
+    </script>
 </body>
 
 </html>
