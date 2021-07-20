@@ -20,10 +20,10 @@
             <a href="customer_login.html">NC</a>
             <ul>
                 <li>
-                    <a data-aos="fade-down" data-aos-duration="900" href="customer_login.html"><i class="fas fa-shopping-cart"></i></a>
+                    <a data-aos="fade-down" data-aos-duration="900" href="customer_order.html">Volver</a>
                 </li>
                 <li>
-                    <a data-aos="fade-down" data-aos-duration="900" href="customer_login.html">Salir</a>
+                    <a data-aos="fade-down" data-aos-duration="900" href="cart.html"><img src="images/carrito.png" alt="carrito" class="cart-img"></a> 
                 </li>
             </ul>
         </header>
@@ -40,34 +40,8 @@
                     <th scope="col"></th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td><img src="images/cappuccino-en2.jpg" alt="foto"></td>
-                    <td>Capuccino</td>
-                    <td>Una mezcla de espresso con suave y cremosa leche, ligeramente endulzado con toques de cacao.</td>
-                    <td><input type="text" value="2"></td>
-                    <td>$550.00</td>
-                    <td><i class="fas fa-trash-alt"></i></td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td><img src="images/jugos-naturales-shutterstock_121270552.jpg" alt="foto"></td>
-                    <td>Batido frutal</td>
-                    <td>Descripcion pendiente.</td>
-                    <td><input type="text" value="2"></td>
-                    <td>$550.00</td>
-                    <td><i class="fas fa-trash-alt"></i></td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td><img src="images/pexels-jane-d-769969.jpg" alt="foto"></td>
-                    <td>Fideos c/verduras</td>
-                    <td>Descripcion pendiente.</td>
-                    <td><input type="text" value="2"></td>
-                    <td>$550.00</td>
-                    <td><i class="fas fa-trash-alt"></i></td>
-                </tr>
+            <tbody id="table-body">
+    
             </tbody>
 
         </table>
@@ -75,12 +49,15 @@
             <h2>Resumen</h2>
             <hr>
             <h3>Subtotal</h3>
+            <label id="subtotal"></label>
             <h3>Impuesto</h3>
+            <label id="tax"></label>
             <hr>
             <h2>Total del pedido</h2>
-            <button class="button">Finalizar orden</button>
+            <label id="total"></label>
+            <button class="button" onclick="finalizeOrder()">Finalizar orden</button>
         </div>
-        <button class="button cart-button">actualizar carrito</button>
+        <button class="button cart-button" onclick="updateProduct()">actualizar carrito</button>
     </section>
 
     <script src="js/Lib_cart.js"></script>

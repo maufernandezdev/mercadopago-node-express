@@ -1,5 +1,7 @@
+// Descripcion
 // se le pedira un nombre al usuario ingresar a realizar la orden // 
 // en el caso de que sea un cliente que ya este con una orden abierta solo se le pedira el numero de mesa //
+
 
 // limpio la variable session a vacia antes de que el cliente ingrese//
 const Cliente = "clienteSesion";
@@ -55,7 +57,6 @@ let Tables =
 for(var i = 0;i < Tables.length;i++)
 {
     var table = i+1;
-    debugger;
     if(!localStorage.getItem(table))
     {
         localStorage.setItem(table, ""); // cargo el local storage con las mesas
@@ -186,4 +187,9 @@ function cleanFields()
 {
     document.getElementById( 'name' ).value = ""; // set name field to empty
     document.getElementById( 'table-customer' ).value = "";
+}
+
+function seccionNoDisponibleAun()
+{
+    alert("Sección en proceso");
 }

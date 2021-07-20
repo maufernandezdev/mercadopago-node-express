@@ -421,7 +421,7 @@ body {
 }
 .cart .table {
   margin: 1rem;
-  width: 70% !important;
+  width: 65% !important;
   text-align: center;
 }
 .cart .table img {
@@ -441,17 +441,31 @@ body {
   text-align: center;
 }
 .cart .total {
+  display: flex;
+  flex-wrap: wrap;
   width: 25%;
-  height: 275px;
+  height: 290px;
   margin: 1rem;
   padding: 15px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   border-radius: 5px;
 }
+.cart .total h2:nth-child(1) {
+  width: 100%;
+}
 .cart .total h2 {
+  width: 70%;
   font-size: 1.5rem;
 }
 .cart .total h3 {
+  width: 70%;
+  font-size: 1.2rem;
+}
+.cart .total hr {
+  width: 100%;
+}
+.cart .total label {
+  font-weight: bold;
   font-size: 1.2rem;
 }
 .cart .total button {
@@ -642,6 +656,22 @@ body {
 /*** end footer ***/
 /***** end login admin *****/
 /***** start media querys *****/
+@media only screen and (min-width: 500px) {
+  .cart .total {
+    width: 100%;
+  }
+  .cart .cart-button {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 767px) {
+  .cart .total {
+    width: 25%;
+  }
+  .cart .cart-button {
+    width: 15%;
+  }
+}
 @media only screen and (min-width: 1370px) {
   .cutomer-order .galery {
     width: 75%;

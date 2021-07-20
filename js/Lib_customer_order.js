@@ -1,13 +1,3 @@
-// se tomaran los pedidos de los clientes y se enviaran a order manager // 
-// example of a sales order
-// var Order =
-// {
-//     orderNumber: 1234,
-//     total: 500,
-//     customer: "Lucia",
-//     description: [Product,Product]
-// }
-
 // const variables //
 const Cliente = "clienteSesion";
 // Start array products //
@@ -16,69 +6,60 @@ var Products = [{
         price: 210.00,
         description: "Una mezcla refrescante de espresso con cremosa leche es la clave de este delicioso latte clásico.",
         type: "coffee",
+        img:"images/caffe-latte-en2.jpg"
     },
     {
         name: "Cappuccino",
         price: 275.00,
         description: "Una mezcla de espresso con suave y cremosa leche, ligeramente endulzado con toques de cacao.",
         type: "coffee",
+        img:"images/cappuccino-en2.jpg"
     },
     {
         name: "Signature Chocolate",
         price: 275.00,
         description: "Nuestro signature chocolate es una deliciosa mezcla de cremosa leche y notas de chocolate.",
         type: "coffee",
+        img:"images/signature-chocolate-en2.jpg"
     },
     {
         name: "Caramel Macchiato",
         price: 250.00,
         description: "Deliciosa mezcla de intenso espresso con cremosa leche y el dulce sabor y textura del caramelo.",
         type: "coffee",
+        img:"images/caramel-macchiato-en2.jpg"
     },
     {
         name: "Batido frutal",
         price: 250.00,
-        description: "Descripcion pendiente.",
+        description: "Batido con las más deliciosas frutas de estación.",
         type: "food",
+        img:"images/jugos-naturales-shutterstock_121270552.jpg"
     },
     {
         name: "Tostadas c/palta",
         price: 250.00,
-        description: "Descripcion pendiente.",
+        description: "Tostadas con huevo y palta.",
         type: "food",
+        img:"images/pexels-foodie-factor-566566.jpg"
     },
     {
         name: "Yogur c/Frutas",
         price: 250.00,
-        description: "Descripcion pendiente.",
+        description: "Yogur con colchón de frutas.",
         type: "food",
+        img:"images/pexels-jane-d-1099680.jpg"
     },
     {
         name: "Fideos c/verduras",
         price: 250.00,
-        description: "Descripcion pendiente.",
+        description: "Fideos con verduras salteadas.",
         type: "food",
+        img:"images/pexels-jane-d-769969.jpg"
     },
 
 ];
 // End array Coffees //
-
-
-
-
-// Start array Foods //
-var Foods = [{
-        name: "Sandwich",
-        price: 300.00,
-        description: "Grilled Ham and Cheese sandwich"
-    },
-    {
-        name: "Brownie",
-        price: 275.00,
-        description: "Walnut brownie"
-    }
-];
-// End array Foods //
 
 // start object functions
 var Functions = {
@@ -109,6 +90,7 @@ var Functions = {
                     name:Products[i].name,
                     price:Products[i].price,
                     description:Products[i].description,
+                    img:Products[i].img
                 });
                 localStorage.setItem(cartName , ""); // vacio el localStorage antes de volver a llenarlo
                 localStorage.setItem(cartName , JSON.stringify(cartContent)); // lleno el storage 
@@ -118,31 +100,11 @@ var Functions = {
     },
     cleanSesion:function()
     {
-        
         localStorage.setItem(Cliente, JSON.stringify( {
             name: "",
             table: "",
         }));
     },
-    // createCart:function()
-    // {
-    //     var item = localStorage.getItem(Cliente); // obtengo el cliente
-    //     var Customer =  JSON.parse(item); // cliente a JSON
-    //     var item2 = localStorage.getItem(Customer.table); // obtengo el detalle de la mesa del cliente
-    //     var cart = 'cartTable'+Customer.table;
-    //     if(localStorage.getItem(cart) === null)
-    //     {
-    //         var obj = {};
-    //         for(var i =0;i < Products.length;i++)
-    //         {
-    //             obj[i] = 0; 
-    //         }
-    //         if(Object.keys(obj).length > 0)
-    //         {
-    //             localStorage.setItem(cart, JSON.stringify({obj}));
-    //         }
-    //     }
-    // }
 };
 // start object functions
 // coffees 
@@ -190,4 +152,3 @@ function setName()
 }
 
 setName();
-//Functions.createCart();
