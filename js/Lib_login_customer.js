@@ -1,6 +1,17 @@
 // Descripcion
 // se le pedira un nombre al usuario ingresar a realizar la orden // 
 // en el caso de que sea un cliente que ya este con una orden abierta solo se le pedira el numero de mesa //
+// para realizar el recorrido correctamente por el sitio debe ingresar a customer_login.html 
+// a partir de ahi podra ingresar , indicando una mesa y registrandose con su nombre 
+// en el caso de que la mesa indicada ya este ocupada no se le pedira el nombre nuevamente 
+// el sistema asume que si ingreso una mesa ocupada usted es quien esta sentado en esa mesa realizando el pedido
+
+
+// Cosas que todavia no funcionan en esta version //
+
+// 1. el boton detalle de los productos deberia ser un modal con la descripcion del producto seleccionado //
+// 2. los productos que se actualizan en la seccion del carrito, solo se pueden actualizar antes de pagar , ya que si se vuelve al menu anterior los cambios se pierden (salvo que sea la funcion eliminar producto)
+// 3. la seccion orden manager, el administrador del lugar (cliente mesas), todavia no esta disponible //
 
 
 // limpio la variable session a vacia antes de que el cliente ingrese//
