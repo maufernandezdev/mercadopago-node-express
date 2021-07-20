@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>sing in</title>
+</head>
+
+<body>
+    <section class="customer-login" style="height: 100vh;">
+        <div class="container">
+            <header class="header">
+                <a href="customer_login.html">NC</a>
+                <ul>
+                    <li>
+                        <a data-aos="fade-down" data-aos-duration="900" href="customer_login.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a data-aos="fade-down" data-aos-duration="1100" onclick="seccionNoDisponibleAun()" href="#">Nosotros</a>
+                    </li>
+                    <li>
+                        <a data-aos="fade-down" data-aos-duration="1100" onclick="seccionNoDisponibleAun()" href="#">Sign in</a>
+                    </li>
+                </ul>
+            </header>
+
+            <img src="images/undraw_Order_confirmed_re_g0if.svg" alt="order">
+            <div class="customer-name">
+                <!-- <h2>Ingrese su nombre para realizar la orden</h2> -->
+                <input type="text" id="table-customer" placeholder="mesa" minlength="1" maxlength="2">
+                <input type="text" id="name" class="name" placeholder="nombre" minlength="3" maxlength="20">
+                <button class="order button" id="send" onclick="addCustomer()">Ingresar</button>
+            </div>
+        </div>
+    </section>
+    <script src="js/Lib_login_customer.js"></script>
+    <!-- jQuery , Popper.js, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            var table = document.getElementById("table-customer");
+            table.addEventListener("change", function(event) {
+                var tableValue = document.getElementById("table-customer").value;
+                if(tableValue != "")
+                {
+                    var isNumber = /^[0-9]*$/.test(tableValue);
+                    var checkTable = Functions.checkTable(tableValue);
+                    if (!checkTable && isNumber ) {
+                        $("#name").show(700);
+                    }
+                    if (!isNumber) {
+                        alert("Ingrese solo numeros para seleccionar una mesa");
+                        $("#name").hide(700);
+                    }
+                    if(checkTable)
+                    {   
+                        $("#name").hide(700);
+                    }
+                    
+                }
+                if (tableValue == "") {
+                    $("#name").hide(700);
+                }
+                
+            });
+        });
+    </script>
+</body>
+
+</html>

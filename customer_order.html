@@ -6,11 +6,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <title>customer order</title>
 </head>
 
 <body>
-<script src="js/Lib_customer_order.js"></script>
+    <section class="cutomer-order">
+        <header class="header">
+            <a href="customer_login.html">NC</a>
+            <ul>
+                <li id="customer-session">
+                </li>
+                <li>
+                    <a data-aos="fade-down" data-aos-duration="900" onclick="Functions.cleanSesion()" href="customer_login.html">Salir</a>
+                </li>
+                <li>
+                    <a data-aos="fade-down" data-aos-duration="900" href="cart.html"><img src="images/carrito.png" alt="carrito" class="cart-img"></a> 
+                </li>
+            </ul>
+        </header>
+
+        <div class="galery">
+            <div class="coffee-galery__item" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/caffe-latte-en2.jpg" alt="responsive"></div>
+            <div class="coffee-galery__item" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/cappuccino-en2.jpg" alt="responsive"></div>
+            <div class="coffee-galery__item" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/signature-chocolate-en2.jpg" alt="responsive"></div>
+            <div class="coffee-galery__item" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/caramel-macchiato-en2.jpg" alt="responsive"></div>
+        </div>
+        <div class="galery">
+            <div class="food-galery__item" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/jugos-naturales-shutterstock_121270552.jpg" alt="responsive"></div>
+            <div class="food-galery__item" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/pexels-foodie-factor-566566.jpg" alt="responsive"></div>
+            <div class="food-galery__item" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/pexels-jane-d-1099680.jpg" alt="responsive"></div>
+            <div class="food-galery__item" data-aos="flip-up" data-aos-duration="900" data-aos-once="true"><img src="images/pexels-jane-d-769969.jpg" alt="responsive"></div>
+        </div>
+        <!-- footer -->
+        <footer class="site-footer">
+            <div class="container-footer">
+                <div class="row about">
+                    <div class="col-sm-12 col-md-6">
+                        <h6>About</h6>
+                        <p class="text-justify">Somos una empresa de origen Argentina que nació con la motivación de incentivar a más y más personas a cuidar su salud mediante la buena alimentación. Nuestra misión es enseñar a nuestros clientes a que se pueden comer comidas ricas y al mismo tiempo saludables.</p>
+                    </div> 
+                </div>
+                <hr>
+            </div>
+            <div class="container-footer">
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                        <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by
+                            <a href="https://mauri-fernandez.github.io/Personal-Web-Site/index.html" target="_blank">Mauricio Fernandez</a>.
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <ul class="social-icons">
+                            <li><a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a class="dribbble" href="#"><i class="fab fa-dribbble"></i></a></li>
+                            <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <script src="js/Lib_customer_order.js"></script>
+    <script src="js/Functions.js"></script>
+    <!-- jQuery , Popper.js, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
 </body>
 
 </html>
