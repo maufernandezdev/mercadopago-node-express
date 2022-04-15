@@ -1,8 +1,8 @@
 # mercadopago-node-express
 
-The project includes the design of an e-commerce (No plugins or templates are used and it is fully responsive).
-It also has a connection to `mercadopago` made with node js and express.
-You can use the project to set up your own store and charge with mercadopago from Argentina
+* The project includes the design of an e-commerce (No plugins or templates are used and it is fully responsive).
+* It also has a connection to `mercadopago` made with node js and express.
+* You can use the project to set up your own store and charge with mercadopago from Argentina
 
 ### node installations
 * Step 1: Start node (npm init --yes)
