@@ -5,13 +5,13 @@ It also has a connection to `mercadopago` made with node js and express.
 You can use the project to set up your own store and charge with mercadopago from Argentina
 
 ### node installations
-Step 1: Start node (npm init --yes)
-Step 2: Install express (npm install express)
-Step 3: Install nodemon to display real-time server (npm install –D nodemon)
-Step 4: Install body parser to be able to parse the body of the request (npm install body-parser)
-Step 4: in package.json: Go to scripts and add shortcut to run nodemon pointing to the file where we are going to start express (npx nodemon js/file)
-Step 5: Install the Mercadopago SDK (npm install mercadopago)
-Step 6: We look for the Access token in our Mercadopago account
+* Step 1: Start node (npm init --yes)
+* Step 2: Install express (npm install express)
+* Step 3: Install nodemon to display real-time server (npm install –D nodemon)
+* Step 4: Install body parser to be able to parse the body of the request (npm install body-parser)
+* Step 5: in package.json: Go to scripts and add shortcut to run nodemon pointing to the file where we are going to start express (npx nodemon js/file)
+* Step 6: Install the Mercadopago SDK (npm install mercadopago)
+* Step 7: We look for the Access token in our Mercadopago account
 
 note: this access token will be use in `checkout.js` (mercadopago.configure)
 
