@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({ extended: false })); // parse application/x-www-
 
 // // Agrega credenciales // cuenta del vendedor
 mercadopago.configure({
-    access_token: "TEST-7974656510754281-030814-20836cabe8f81d381a051d44e9a11510-162067010",
+    access_token: "", // your access token here
   });
 
 app.post('/checkout',(req , res) => {
