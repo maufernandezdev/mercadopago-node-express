@@ -8,6 +8,36 @@
 
 html {
   overflow-x: hidden;
+
+}
+
+:root{
+  /* ===== Colors ===== */
+  --body-color: #E4E9F7;
+  --sidebar-color: #FFF;
+  --primary-color: #695CFE;
+  --primary-color-light: #F6F5FF;
+  --toggle-color: #DDD;
+  --text-color: #707070;
+
+  /*** custom colors ***/
+  
+  --solid-primary-color:#695CFE;
+  --title-color: #1c1d1f;
+  --discount:#00a650;
+  --solid-white-color:#fff;
+
+  /* dark colors */
+  --dark-body-color: #18191a;
+  --dark-sidebar-color: #242526;
+  --dark-primary-color: #3a3b3c;
+  --text-color: #ccc;
+
+  /* ====== Transition ====== */
+  --tran-03: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.3s ease;
+  --tran-05: all 0.3s ease;
 }
 
 section {
@@ -60,6 +90,10 @@ h1 {
   text-decoration: none;
 }
 
+.header i {
+  font-size: 1.7rem;
+}
+
 :root {
   --main-green-color: #5E981A;
 }
@@ -82,20 +116,23 @@ h1 {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   margin: auto;
   background-color: #f7f7f7;
+  height: 50px
+
 }
 .cutomer-order .header ul {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+
 }
 .cutomer-order .header ul li {
   display: inline-block;
   text-align: center;
-  margin: 0rem 1rem;
 }
 .cutomer-order .header ul li a {
   font-size: 1.2rem;
@@ -112,8 +149,13 @@ h1 {
   font-size: 1.2rem;
   color: #000;
   text-decoration: none;
-  margin-top: -16px;
 }
+
+.header i {
+  font-size: 1.7rem;
+  margin-top: 0.5rem;
+}
+
 .cutomer-order .galery {
   display: grid;
   width: 85%;
@@ -497,13 +539,19 @@ body {
   margin: 20px 0;
 }
 
-.site-footer h6 {
-  color: #fff;
-  color: #000;
-  font-size: 16px;
-  text-transform: uppercase;
-  margin-top: 5px;
-  letter-spacing: 2px;
+.site-footer h2 {
+  
+  color: #26272b;
+  font-size: 1.2rem;
+  margin: 5px 0px;
+  font-family: 'Poppins',sans-serif;
+  text-align:center;
+  
+}
+
+.site-footer .text-justify{
+
+  text-align:center;
 }
 
 .site-footer a {
@@ -681,3 +729,145 @@ body {
 /***** end media querys *****/
 
 /*# sourceMappingURL=styles.css.map */
+
+.wrapper{
+  width:100%;
+  padding-top: 20px;
+  text-align:center;
+  background-color:#E4E9F7;
+}
+.wrapper h2{
+  font-family:sans-serif;
+  font-family: 'Poppins', sans-serif;
+  color:#fff;
+  color: #26272b;
+  padding: 0rem 1rem;
+  font-size: 1.2rem;
+}
+.carousel{
+  width:100%;
+  margin:0px auto;
+}
+
+.carousel h3{
+  font-size: 1.1rem;
+  padding: 0.5rem 0rem 0rem 0rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  text-align:center;
+}
+
+.carousel h4{
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  color: #707070;
+  text-align:center;
+}
+
+.carousel h5{
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  color: #695CFE;
+  text-align:center;
+}
+
+.carousel .slick-slide
+{
+  background-color: #fff;
+  border-radius: 4px;
+  transition: var(--tran-04);
+  cursor: pointer;
+  /* box-shadow: 2.5px 2.5px 10px rgba(0,0,0,0.5); */
+
+}
+
+.carousel .slick-slide:hover
+{
+  box-shadow: 2.5px 2.5px 10px rgba(0,0,0,0.5);
+}
+
+.carousel .slick-arrow{
+  display: none;
+  opacity: 0;
+}
+
+/* .carousel .slick-arrow::before{
+  font-size: 1.9rem;
+  color: #695CFE;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  background-color: #fff;
+}
+.carousel .slick-arrow
+{
+  margin: 0rem 1rem;
+  background-color: transparent;
+  z-index: 100;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+} 
+
+.carousel .slick-arrow:hover{
+  margin: 0rem 1rem;
+  background-color: transparent;
+  z-index: 100;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+.carousel .slick-arrow:active{
+  margin: 0rem 1rem;
+  background-color: transparent;
+  z-index: 100;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+} */
+.carousel div img{
+  /* min-width:  */
+  width: 100%;
+  height: 170px;
+}
+
+.drinks div img{
+  /* min-width:  */
+  width: 120px;
+  height: 200px;
+  margin: 0px auto;
+}
+.slick-slide{
+  margin:10px;
+}
+.slick-slide img{
+  width:100%;
+  border: 2px solid #fff;
+}
+.wrapper .slick-dots li button:before {
+  font-size:20px;
+  color:white;
+  color: #695CFE;
+}
+
+@media only screen and (min-width: 1024px){
+
+  .wrapper h2{
+
+    font-size: 1.7rem;
+  }
+}
+
+/* [2022-04-08] - loader */
+
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('../images/pageLoader3.gif') 50% 50% no-repeat #fff;
+  background-size: 55px 55px;
+}
+
